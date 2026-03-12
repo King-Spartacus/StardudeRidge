@@ -12,12 +12,18 @@
 <tw-storydata name="StardudeRidge" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="7D3624BE-BCB1-4C29-A0FF-27362E894BEB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 1. Import the pixel font */
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-/* 2. Hide Twine's default undo/redo sidebar for a cleaner game look */
+/* 2. Hide the sidebar globally */
 tw-sidebar { 
   display: none; 
 }
 
-/* 3. The Stardew Box (Forces Harlowe to behave) */
+/* 3. Global settings: Ensure images always fit inside the screen and maintain aspect ratio */
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 4. Default Stardew Box (Desktop-First) */
 tw-passage {
   background-color: #fceea7 !important; 
   border: 8px solid #8b4513 !important; 
@@ -30,21 +36,22 @@ tw-passage {
   margin: 40px auto; 
   box-shadow: 5px 5px 0px rgba(0,0,0,0.4); 
   display: block;
-  line-height: 1.1; /* This fixes the huge gaps between text lines */
+  line-height: 1.1; 
+  box-sizing: border-box; /* Crucial: Includes padding and border in the width calculation */
 }
 
-/* 4. Your Character's Dialogue & Automatic Divider Line */
+/* 5. Your Character's Dialogue & Line (Desktop-First) */
 .chris-text {
   color: #1c5213; 
   font-weight: bold;
-  font-size: 36px; /* NEW: Bumps up your text size! */
+  font-size: 36px;
   padding-bottom: 15px; 
   margin-bottom: 20px;  
   border-bottom: 4px solid #8b4513; 
   display: block; 
 }
 
-/* 5. The Choices */
+/* 6. The Choices (Desktop-First) */
 tw-passage tw-link {
   color: #1a4a8b !important;
   text-decoration: none;
@@ -55,6 +62,27 @@ tw-passage tw-link {
 
 tw-passage tw-link:hover {
   color: #000 !important;
+}
+
+/* =========================================================
+   7. MOBILE-SPECIFIC FIXES (Media Query)
+   ========================================================= */
+/* These rules only apply when the screen width is less than 600px */
+@media screen and (max-width: 600px) {
+  tw-passage {
+    width: 95% !important; /* Spans almost the full width of the phone */
+    padding: 15px !important; /* Shrunk padding to save space */
+    border: 4px solid #8b4513 !important; /* Thinner border looks better on small screens */
+    margin: 10px auto; /* Reduced margins around the box */
+    font-size: 24px !important; /* Slightly smaller font size for better fit */
+  }
+
+  .chris-text {
+    font-size: 30px !important; /* Scales down your character's font size too */
+    padding-bottom: 10px !important;
+    margin-bottom: 15px !important;
+    border-bottom: 3px solid #8b4513 !important; /* Thinner divider line */
+  }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="825,325" size="200,200">&lt;img src=&quot;https://i.imgur.com/ejM5vtO.png&quot; width=&quot;700&quot; height=&quot;100&quot;&gt;
 
 You enter into the room and find Chris playing a fighting game on his computer.
