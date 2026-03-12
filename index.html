@@ -9,22 +9,75 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play StardudeRidge.</tw-noscript></noscript></tw-story>
-<tw-storydata name="StardudeRidge" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="7D3624BE-BCB1-4C29-A0FF-27362E894BEB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="975,425" size="100,100">You enter into the room and find Chris playing a fighting game on his computer.
+<tw-storydata name="StardudeRidge" startnode="1" creator="Twine" creator-version="2.11.1" format="Harlowe" format-version="3.3.9" ifid="7D3624BE-BCB1-4C29-A0FF-27362E894BEB" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 1. Import the pixel font */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-[[Hey, what&#39;cha up to?]]</tw-passagedata><tw-passagedata pid="2" name="Hey, what&#39;cha up to?" tags="" position="975,550" size="100,100">(text-colour:white)+(bg:#307d15)[Chris: Hey amigo, just playin this great little Dragon Ball fighting game.
-]
+/* 2. Hide Twine's default undo/redo sidebar for a cleaner game look */
+tw-sidebar { 
+  display: none; 
+}
+
+/* 3. The Stardew Box (Forces Harlowe to behave) */
+tw-passage {
+  background-color: #fceea7 !important; 
+  border: 8px solid #8b4513 !important; 
+  border-radius: 10px;
+  padding: 30px !important;
+  color: #4a2e15 !important; 
+  font-family: 'VT323', monospace !important; 
+  font-size: 28px !important; 
+  width: 80%;
+  margin: 40px auto; 
+  box-shadow: 5px 5px 0px rgba(0,0,0,0.4); 
+  display: block;
+  line-height: 1.1; /* This fixes the huge gaps between text lines */
+}
+
+/* 4. Your Character's Dialogue & Automatic Divider Line */
+.chris-text {
+  color: #1c5213; 
+  font-weight: bold;
+  font-size: 36px; /* NEW: Bumps up your text size! */
+  padding-bottom: 15px; 
+  margin-bottom: 20px;  
+  border-bottom: 4px solid #8b4513; 
+  display: block; 
+}
+
+/* 5. The Choices */
+tw-passage tw-link {
+  color: #1a4a8b !important;
+  text-decoration: none;
+  display: block;
+  margin-top: 8px; 
+  margin-bottom: 8px; 
+}
+
+tw-passage tw-link:hover {
+  color: #000 !important;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="825,325" size="200,200">&lt;img src=&quot;https://i.imgur.com/ejM5vtO.png&quot; width=&quot;700&quot; height=&quot;100&quot;&gt;
+
+You enter into the room and find Chris playing a fighting game on his computer.
+
+[[Hey, what&#39;cha up to?]]</tw-passagedata><tw-passagedata pid="2" name="Hey, what&#39;cha up to?" tags="" position="875,550" size="100,100">&lt;div class=&quot;chris-text&quot;&gt;Chris: Hey amigo, just playin this great little Dragon Ball fighting game.&lt;/div&gt;
+
 [[1. Oh, neat! Can&#39;t say I know much about Dragon Ball, but this sure looks pretty...fighting game-y.]]
-
 [[2. DUDE DBZ IS MY SHIT]]
-
 [[3. Idk much about Dragon Ball...but if you&#39;d like to tell me about it, I&#39;d love to learn a little]]
-
 [[4. Fighting games and/or Dragon Ball are lame af, tbh]]
 
-</tw-passagedata><tw-passagedata pid="3" name="1. Oh, neat! Can&#39;t say I know much about Dragon Ball, but this sure looks pretty...fighting game-y." tags="" position="975,675" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="2. DUDE DBZ IS MY SHIT" tags="" position="850,675" size="100,100">(text-colour:white)+(bg:#307d15)Chris: *stunned excited bewilderment* :O  
+</tw-passagedata><tw-passagedata pid="3" name="1. Oh, neat! Can&#39;t say I know much about Dragon Ball, but this sure looks pretty...fighting game-y." tags="" position="175,700" size="100,100">&lt;div class=&quot;chris-text&quot;&gt; Yeah it&#39;s uh...certainly one of the fighting games of all time. Wanna chill &amp; chat a bit while I clap some cheeeks?&lt;/div&gt;
+
+[[1. Sure!  *yapping commences*]]
+
+[[2. Nah, I&#39;m good. I&#39;ll see you around or something.]]
+
+[[~~3. Heh, I&#39;d like to clap *your* cheeks, nah mean? &gt;:] ~~]]</tw-passagedata><tw-passagedata pid="4" name="2. DUDE DBZ IS MY SHIT" tags="" position="850,675" size="100,100">&lt;div class=&quot;chris-text&quot;&gt; Chris: *stunned excited bewilderment* :O 
+
+&lt;img src=&quot;https://i.imgur.com/bP9nwRD.png&quot; width=&quot;211&quot; height=&quot;220&quot;&gt;
 
 ~~I want you to have my babies right here and now. ~~
-No way! I love finding a fellow DBZ fan! Are you like, a really big fan, or just kinda casual? 
+No way! I love finding a fellow DBZ fan! Are you like, a really big fan, or just kinda casual?&lt;/div&gt;
 
 [[1. Lol nah I was just fuckin with ya to see how you&#39;d react]]
 
@@ -34,7 +87,105 @@ No way! I love finding a fellow DBZ fan! Are you like, a really big fan, or just
 
 [[4. I fucking love it! Been watching for years! I still go back and watch old episodes of Z and Kai because both are so good haha.]]
 
-[[5. [Something moderate between 2-4]]</tw-passagedata><tw-passagedata pid="5" name="3. Idk much about Dragon Ball...but if you&#39;d like to tell me about it, I&#39;d love to learn a little" tags="" position="975,800" size="100,100"></tw-passagedata><tw-passagedata pid="6" name="4. Fighting games and/or Dragon Ball are lame af, tbh" tags="" position="1100,675" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="1. Lol nah I was just fuckin with ya to see how you&#39;d react" tags="" position="850,800" size="100,100"></tw-passagedata><tw-passagedata pid="8" name="2. Honestly I haven&#39;t watched it in like, 15 years but man did I love it when I was a kid." tags="" position="725,800" size="100,100"></tw-passagedata><tw-passagedata pid="9" name="3. Fairly casual, mostly watched Z and a bit of Super, not as into it as I used to be. That Broly movie was pretty crazy, tho." tags="" position="850,925" size="100,100"></tw-passagedata><tw-passagedata pid="10" name="4. I fucking love it! Been watching for years! I still go back and watch old episodes of Z and Kai because both are so good haha." tags="" position="975,925" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="5. [Something moderate between 2-4" tags="" position="725,925" size="100,100"></tw-passagedata></tw-storydata>
+[[5. [Something moderate between 2-4]]</tw-passagedata><tw-passagedata pid="5" name="3. Idk much about Dragon Ball...but if you&#39;d like to tell me about it, I&#39;d love to learn a little" tags="" position="1075,675" size="100,100">&lt;div class=&quot;chris-text&quot;&gt;Omg, I&#39;d love to!&lt;/div&gt;
+
+&lt;img src=&quot;https://i.imgur.com/5bdRfj5.png&quot; width=&quot;211&quot; height=&quot;220&quot;&gt;
+
+&lt;div class=&quot;chris-text&quot;&gt;Oh jeez, where to begin. So like, it&#39;s about this guy named Goku, who&#39;s a saiyan - saiyans are aliens from this planet called Vegeta, which also happens to be the name of one of the other characters...and also his father...it&#39;s weird. Probably their surname too...okay maybe I should start with OG DB. So, the story originally followed this lil monkey boy named Goku, who at the time was *not* an alien because Akira Toriyama, the creator, was flying by the seat of his pants, and --- okay wait maybe I should give even MOAR KONTEKST. Alright, so have you ever heard of the old Chinese novel, &quot;Journey to the West?&quot; It&#39;s about this enlightened super monkey named Sun Wukong, which is actually the Chinese name of Goku -- err actually it&#39;s the reverse, where Goku is a name for Sun Wukong in Japanese for some reason, so Toriyama based it on that, and...&lt;/div&gt;
+
+[[Nervously but eagerly weather the fanboy storm  (Your bond strengthens, but your brain melts a bit).-&gt;Your bond strengthens.]]
+[[Die.]]
+</tw-passagedata><tw-passagedata pid="6" name="4. Fighting games and/or Dragon Ball are lame af, tbh" tags="" position="1250,675" size="100,100">&lt;img src=&quot;https://i.imgur.com/Msn2kj3.png&quot; width=&quot;211&quot; height=&quot;220&quot;&gt;
+
+&lt;div class=&quot;chris-text&quot;&gt;Wow, that was a bit uncalled for...and rude. Feel free to go somewhere else, I guess...&lt;/div&gt;
+
+[[Make better choices.-&gt;Hey, what&#39;cha up to?]]</tw-passagedata><tw-passagedata pid="7" name="1. Lol nah I was just fuckin with ya to see how you&#39;d react" tags="" position="550,800" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[&lt;img src=&quot;https://i.imgur.com/u1fcztp.png&quot; width=&quot;211&quot; height=&quot;220&quot;&gt;]
+
+
+&lt;div class=&quot;chris-text&quot;&gt;Chris: Wow. You&#39;re a wee bit of a huge asshole, ain&#39;t ya?&lt;/div&gt;
+
+Make better choices.
+
+[[Hey, what&#39;cha up to?]]</tw-passagedata><tw-passagedata pid="8" name="2. Honestly I haven&#39;t watched it in like, 15 years but man did I love it when I was a kid." tags="" position="700,800" size="100,100">&lt;div class=&quot;chris-text&quot;&gt;Ha, that&#39;s awesome.&lt;/div&gt;
+
+[[1. Nerd out/reminisce and chill]]
+[[2. Hang out]]
+[[3. Suddenly disengage and leave like a weirdo]]</tw-passagedata><tw-passagedata pid="9" name="3. Fairly casual, mostly watched Z and a bit of Super, not as into it as I used to be. That Broly movie was pretty crazy, tho." tags="" position="850,800" size="100,100">&lt;div class=&quot;chris-text&quot;&gt;Ermagerd yass, crazy shit.&lt;/div&gt;
+
+[[Chat about the movies, strengthening your bond.-&gt;Your bond strengthens.]]
+[[Chat about other Dragon Ball stuff and move on, strengthening your bond.-&gt;Your bond strengthens.]]
+[[Hang out, yappin bout thangs, strengthening your bond.-&gt;Your bond strengthens.]]</tw-passagedata><tw-passagedata pid="10" name="4. I fucking love it! Been watching for years! I still go back and watch old episodes of Z and Kai because both are so good haha." tags="" position="950,800" size="100,100">&lt;div class=&quot;chris-text&quot;&gt;AAAAA, a man/woman/horse/goat/cat/dog/alien after me own heart &lt;3&lt;/div&gt;
+
+[[Yapping and good times ensue, strengthening your bond.-&gt;Your bond strengthens.]]
+</tw-passagedata><tw-passagedata pid="11" name="5. [Something moderate between 2-4" tags="" position="1400,675" size="100,100">[Some moderate response from Chris]
+
+
+[[Your bond strengthens (moderately). -&gt; Your bond strengthens.]]</tw-passagedata><tw-passagedata pid="12" name="1. Sure!  *yapping commences*" tags="" position="75,825" size="100,100">//You chill and chat for a while, before moving onto other things, and having a nice time together.//
+
+
+[[Your bond strengthens.]]</tw-passagedata><tw-passagedata pid="13" name="2. Nah, I&#39;m good. I&#39;ll see you around or something." tags="" position="175,825" size="100,100">
+
+(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[[[sadge.-&gt;Hey, what&#39;cha up to?]]]</tw-passagedata><tw-passagedata pid="14" name="~~3. Heh, I&#39;d like to clap *your* cheeks, nah mean? &gt;:] ~~" tags="" position="275,825" size="100,100">
+
+Bruh, does this look like a 10 heart interaction to you? 
+
+Your mom may be this easy, but a smart/talented/sophistacted/elegant/fantastic/kind/loving/weeb---wait that&#39;s not a positive attribute--*cultured*/endearing...
+
+...
+
+...
+
+...
+
+...guy like this will not be had so easily...you...scoundrel, you.
+
+
+;)
+
+[[Let&#39;s...pursue a different path, shall we?-&gt;Hey, what&#39;cha up to?]]</tw-passagedata><tw-passagedata pid="15" name="Your bond strengthens." tags="" position="875,1300" size="100,100">[(Half-assed brief 10 heart event, cuz scope creep burnt me out lmao)]
+
+&lt;img src=&quot;https://i.imgur.com/GxQBTVM.png&quot; width=&quot;814&quot; height=&quot;515&quot;&gt;
+
+//You pass by as Chris is leaving his home. A rare sight, indeed.//
+
+&lt;div class=&quot;chris-text&quot;&gt;Howdy, Ninfriendo. Bout to go for a lil drive to clear my head. Wanna tag along?&lt;/div&gt;
+
+[[Sure, everything okay?]]
+[[Die...for some reason? -&gt;Die.]]
+
+</tw-passagedata><tw-passagedata pid="16" name="1. Nerd out/reminisce and chill" tags="" position="600,900" size="100,100">You nerd out, reminisce and chill.
+
+[[Your bond strengthens.]]</tw-passagedata><tw-passagedata pid="17" name="2. Hang out" tags="" position="700,900" size="100,100">You chill and chat for a while, before moving onto other things.
+
+[[Your bond strengthens.]] </tw-passagedata><tw-passagedata pid="18" name="3. Suddenly disengage and leave like a weirdo" tags="" position="800,900" size="100,100">&lt;div class=&quot;chris-text&quot;&gt;Uh...alright, I guess? See you later?&lt;/div&gt;
+*whispers under breath*
+&lt;div class=&quot;chris-text&quot;&gt;*Fuckin bum*&lt;/div&gt;
+
+[[Make better choices.-&gt;Hey, what&#39;cha up to?]]</tw-passagedata><tw-passagedata pid="19" name="Die." tags="" position="1075,800" size="100,100">&lt;img src=&quot;https://i.imgur.com/tlWE4uR.png&quot;&gt;
+
+You thought I was joking, didn&#39;t you? Nope. You actually, literally, clinically died. I know Chris can be a bit much when he&#39;s excited but Jesus, you really preferred to die than sit through the man&#39;s excitement?
+
+Well fuck you too. No button to return to the top for you. That&#39;s your punishment. Think about what you&#39;ve done for a moment, and then refresh the page or go back or whatever you gotta do to reload this riveting experience that you chose to die in. Let&#39;s not even get started on how horrifying it must have been for him, for you to just fucking drop dead right there in front of him like that. Just another thing for him to need therapy for. Sheesh.
+
+
+
+
+*You fuckin&#39; [deceased] bum, you.*</tw-passagedata><tw-passagedata pid="20" name=" Your bond strengthens." tags="" position="1400,800" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="Sure, everything okay?" tags="" position="875,1425" size="100,100">//You head out together as the sun sets and night sets upon the world. As the sun sets and the sky begins to darken, so too does the conversation. Chris gradually reveals his woes and worries to you, giving insight into his day to day struggles. 
+
+As the stars reveal themselves and the two of you converse, so too do twinkles and glimmers of hope reveal themselves. The discussion eventually reaches a pleasant conclusion, and you quietly enjoy the ride together and vibe to some good music as you cruise along the highway into the night.//
+
+&lt;img src=&quot;https://i.imgur.com/LNw0kPi.png&quot; width=&quot;725&quot; height=&quot;500&quot;&gt;
+
+
+&lt;div class=&quot;chris-text&quot;&gt;Thanks for being such a good friend. It means a lot.&lt;/div&gt;
+
+
+
+
+
+
+(text-style:&quot;bold&quot;,&quot;smear&quot;,&quot;expand&quot;,&quot;tall&quot;)[The End.
+]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
